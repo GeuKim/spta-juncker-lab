@@ -106,7 +106,7 @@ if st.button("Run Simulation"):
                 if final_pos[1] < -L:
                     ax.plot(final_pos[0], final_pos[1], 'xr', markersize=8)  # Red X = exited
                 else:
-                    ax.plot(final_pos[0], final_pos[1], 'x', markersize=8)  # Green X = bound
+                    ax.plot(final_pos[0], final_pos[1], 'xk', markersize=8)  # Green X = bound
         ax.set_title("SPTs")
         ax.set_xlabel("r (µm)")
         ax.set_ylabel("y (µm)")
