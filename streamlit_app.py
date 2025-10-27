@@ -5,7 +5,7 @@ import time
 def clip(value, min_val, max_val):
     return np.minimum(np.maximum(value, min_val), max_val)
 
-st.title("Single particle tracing analysis")
+st.title("Online Stochastic Brownian-agent method (SBAM) simulation")
 
 # Simulation parameters
 n_sim = st.text_input("Number of simulations:", value="2") # Number of simulations
