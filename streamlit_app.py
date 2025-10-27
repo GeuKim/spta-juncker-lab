@@ -23,8 +23,8 @@ if st.button("Run Simulation"):
     BP=float(BP)
     FS=float(FS)
     DC=float(DC)
-    MFS = 2 * FS * 1e-5            # Max drift per µs in µm
-    DL = np.sqrt(4 * DC * 1e-5) * 1e6  # Diffusion length in µm
+    MFS = 2 * FS * 1e-5            # Max drift per 10 µs in µm
+    DL = np.sqrt(4 * DC * 1e-5) * 1e6  # Diffusion length per 10 µs in µm
 
     captured = 0
     SPTs = []  # Store all trajectories
