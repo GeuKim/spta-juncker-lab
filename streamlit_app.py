@@ -13,7 +13,7 @@ r = st.text_input("Pore radius in µm:", value="4")         # Radius in µm
 L = st.text_input("Pore length in µm:", value="20")        # Length in µm
 BP = st.text_input("Binding probability:", value="0.014")    # Binding probability
 FS = st.text_input("Average flow speed in µm/s:", value="133")    # Flow speed in µm/s
-DC = st.text_input("Diffusion coefficient in m^2/s:", value="8e-11")    # Diffusion coefficient in m²/s
+DC = st.text_input("Diffusion coefficient in µm^2/s:", value="80")    # Diffusion coefficient in µm²/s
 
 if st.button("Run Simulation"):
     start_time = time.time()
@@ -24,7 +24,7 @@ if st.button("Run Simulation"):
     FS=float(FS)
     DC=float(DC)
     MFS = 2 * FS * 1e-5            # Max drift per 10 µs in µm
-    DL = np.sqrt(4 * DC * 1e-5) * 1e6  # Diffusion length per 10 µs in µm
+    DL = np.sqrt(4 * DC * 1e-5)  # Diffusion length per 10 µs in µm
 
     captured = 0
     SPTs = []  # Store all trajectories
