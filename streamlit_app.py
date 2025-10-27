@@ -8,12 +8,12 @@ def clip(value, min_val, max_val):
 st.title("Online Stochastic Brownian-agent method (SBAM) simulation")
 
 # Simulation parameters
-n_sim = st.text_input("Number of simulations:", value="2") # Number of simulations
+n_sim = st.text_input("Number of analytes:", value="2") # Number of simulations
 r = st.text_input("Pore radius in µm:", value="4")         # Radius in µm
 L = st.text_input("Pore length in µm:", value="20")        # Length in µm
-BP = st.text_input("Binding probability:", value="0.028")    # Binding probability
-FS = st.text_input("Average flow speed in µm/s:", value="132.7")    # Flow speed in µm/s
-DC = st.text_input("Diffusion coefficient in m^2/s:", value="8e-11")    # Diffusion coefficient in m²/s
+BP = st.text_input("Binding probability:", value="0.014")    # Binding probability
+FS = st.text_input("Average flow speed in µm/s:", value="133")    # Flow speed in µm/s
+DC = st.text_input("Diffusion coefficient in µm^2/s:", value="80")    # Diffusion coefficient in m²/s
 
 if st.button("Run Simulation"):
     start_time = time.time()
@@ -23,8 +23,8 @@ if st.button("Run Simulation"):
     BP=float(BP)
     FS=float(FS)
     DC=float(DC)
-    MFS = 2 * FS * 1e-6            # Max drift per µs in µm
-    DL = np.sqrt(4 * DC * 1e-6) * 1e6  # Diffusion length in µm
+    MFS = 2 * FS * 1e-5            # Max drift per 10 µs in µm
+    DL = np.sqrt(4 * DC * 1e-5)  # Diffusion length per 10 µs in µm
 
     captured = 0
     SPTs = []  # Store all trajectories
