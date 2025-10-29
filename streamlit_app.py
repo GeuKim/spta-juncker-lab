@@ -8,7 +8,7 @@ def clip(value, min_val, max_val):
 st.title("Online Stochastic Brownian-agent method (SBAM) simulation")
 
 # Simulation parameters
-n_sim = st.text_input("Number of analytes:", value="2") # Number of simulations
+n_sim = st.text_input("Number of analytes (Maximum: 25):", value="2") # Number of simulations
 r = st.text_input("Pore radius in µm:", value="4")         # Radius in µm
 L = st.text_input("Pore length in µm:", value="20")        # Length in µm
 BP = st.text_input("Binding probability:", value="0.014")    # Binding probability
@@ -107,7 +107,7 @@ if st.button("Run Simulation"):
                     ax.plot(final_pos[0], final_pos[1], 'xr', markersize=8)  # Red X = exited
                 else:
                     ax.plot(final_pos[0], final_pos[1], 'xk', markersize=8)  # Green X = bound
-        ax.set_title("SPTs")
+        ax.set_title("Analyte traces")
         ax.set_xlabel("r (µm)")
         ax.set_ylabel("y (µm)")
         plot_placeholder.pyplot(fig)
