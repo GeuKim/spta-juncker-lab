@@ -9,7 +9,6 @@ st.title("Online Stochastic Brownian-agent method (SBAM) simulation")
 
 # Simulation parameters
 n_sim = st.text_input("Number of analytes:", value="2") # Number of simulations
-n_sim = st.text_input("Number of analytes:", value="2") # Number of simulations
 r = st.text_input("Pore radius in µm:", value="4")         # Radius in µm
 L = st.text_input("Pore length in µm:", value="20")        # Length in µm
 BP = st.text_input("Binding probability:", value="0.014")    # Binding probability
